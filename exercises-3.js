@@ -2,11 +2,30 @@
 
 function dataHandling() {
     for (i = 0; i < input.length; i++) {
-        for (j = 0; j < input.length; j++) {
+        for (j = 0; j < input[i].length; j++) {
+            if (j == 0) {
+                console.log('Nomor ID:', input[i][j])
+            }
+            if (j == 1) {
+                console.log('Nama Lengkap:', input[i][j])
+            }
+            if (j == 2) {
+                console.log('TTL:', input[i][j], input[i][j + 1])
+            }
+            if (j == 4) {
+                console.log('Hobi:', input[i][j])
+            }
 
         }
+        if (i !== input.length - 1) {
+            console.log('');
+        }
+
+
     }
+
 }
+
 
 var input = [
     ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
@@ -19,3 +38,5 @@ var input = [
 // Nama Lengkap:  Roman Alamsyah
 // TTL:  Bandar Lampung 21/05/1989
 // Hobi:  Membaca
+
+dataHandling()
