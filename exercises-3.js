@@ -1,5 +1,3 @@
-//--------------------TUGAS STRING TERBALIK--------------------------------------
-
 function dataHandling() {
     for (i = 0; i < input.length; i++) {
         for (j = 0; j < input[i].length; j++) {
