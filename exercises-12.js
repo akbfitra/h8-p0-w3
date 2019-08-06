@@ -3,8 +3,11 @@ function tentukanDeretGeometri(arr) {
     var cekPengali = arr[1] / arr[0]
     for (var i = 0; i < arr.length - 1; i++) {
         var pengali = arr[i + 1] / arr[i]
+        if (pengali != cekPengali) {
+            return false
+        }
     }
-    return pengali === cekPengali
+    return true
 }
 
 // TEST CASES
