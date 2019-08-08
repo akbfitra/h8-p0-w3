@@ -2,6 +2,7 @@ var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca
 dataHandling2(input);
 
 function dataHandling2(input) {
+    input.splice(1, 2, 'Roman Alamsyah Elsharawy', 'Provinsi Bandar Lampung');
     input.splice(5, 1, "Pria", "SMA Internasional Metro")
     console.log(input);
     var bulan = input[3].split('/')
