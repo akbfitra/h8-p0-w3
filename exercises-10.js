@@ -4,7 +4,7 @@ function perkalianUnik(arr) {
     for (var i = 0; i < arr.length; i++) {
         var hasil = 1
         for (var j = 0; j < arr.length; j++)
-            if (arr[i] != arr[j])
+            if (i != j)
                 hasil = hasil * arr[j]
                 //console.log(hasil)
         out.push(hasil);

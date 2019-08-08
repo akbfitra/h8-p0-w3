@@ -3,12 +3,14 @@ function groupAnimals(animals) {
     animals.sort();
     console.log(animals.sort());
     var hasil = [];
-    var index = 0
-    for (var i = 0; i < animals.length; i++) {
-        if (animals[0][0] === animals[i][0]) {
-            hasil.push(animals[i]);
-        } else {
 
+    for (var i = 0; i < animals.length; i++) {
+        var temp = animals[i][j]
+        for (var j = 0; i < animals.length; j++) {
+            if (animals[i][j] == temp) {
+                hasil.push(animals[i][j])
+            }
+            console.log(hasil)
         }
 
 
