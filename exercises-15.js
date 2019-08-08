@@ -1,26 +1,26 @@
 function groupAnimals(animals) {
     // you can only write your code here!
-    animals.sort();
-    console.log(animals.sort());
-    var hasil = [];
+    var sort = animals.sort()
+    var hasil = [
+        []
+    ];
+    var index = 0;
 
-    for (var i = 0; i < animals.length; i++) {
-        var temp = animals[i][j]
-        for (var j = 0; i < animals.length; j++) {
-            if (animals[i][j] == temp) {
-                hasil.push(animals[i][j])
-            }
-            console.log(hasil)
+    hasil[index].push(sort[0])
+
+    for (var i = 1; i < sort.length; i++) {
+        if (sort[i][0] === hasil[index][0][0]) {
+            hasil[index].unshift(sort[i])
+        } else {
+            index++;
+            hasil[index] = [sort[i]]
         }
-
-
-
     }
-    return hasil;
+    return hasil
 }
 
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
 // [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
-// console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak']));
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak']));
 // // [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
